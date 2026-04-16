@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { basePath } from "@/lib/config";
 
 export default function SplashScreen({
   children,
@@ -71,7 +72,7 @@ export default function SplashScreen({
               className="mb-6"
             >
               <Image
-                src="/logo.png"
+                src={`${basePath}/logo.png`}
                 alt="AntonTech"
                 width={64}
                 height={64}

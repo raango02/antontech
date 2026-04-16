@@ -1,5 +1,6 @@
 import { Code2, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import { basePath } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="AntonTech" width={36} height={36} className="h-9 w-9" />
+            <Image src={`${basePath}/logo.png`} alt="AntonTech" width={36} height={36} className="h-9 w-9" />
             <span className="font-heading text-lg font-bold text-foreground">
               Anton<span className="text-accent">Tech</span>
             </span>

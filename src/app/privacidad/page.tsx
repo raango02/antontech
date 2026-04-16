@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { basePath } from "@/lib/config";
 
 export const metadata = {
   title: "Política de Privacidad | AntonTech",
@@ -13,7 +14,7 @@ export default function Privacidad() {
       <nav className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-2xl border border-white/10 bg-[#030303]/80 shadow-lg shadow-black/20 backdrop-blur-xl">
         <div className="flex items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <Image src="/logo.png" alt="AntonTech" width={36} height={36} className="h-9 w-9" />
+            <Image src={`${basePath}/logo.png`} alt="AntonTech" width={36} height={36} className="h-9 w-9" />
             <span className="font-heading text-lg font-bold text-[#f8fafc]">
               Anton<span className="text-[#06b6d4]">Tech</span>
             </span>
