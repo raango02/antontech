@@ -4,6 +4,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, ShieldCheck, Users, Zap, Target, Heart } from "lucide-react";
 
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  );
+}
+
 const values = [
   {
     icon: Zap,
@@ -28,7 +36,6 @@ export default function About() {
 
   return (
     <section id="nosotros" className="relative py-24 sm:py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-[#080d18] to-[#030303]" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         {/* Section header */}
@@ -56,23 +63,20 @@ export default function About() {
           >
             <p className="mb-6 text-lg leading-relaxed text-muted">
               Somos <span className="text-foreground font-semibold">AntonTech</span>, una empresa
-              tecnológica fundada por dos hermanos con una pasión compartida: la
-              tecnología al servicio de las empresas.
+              tecnológica fundada por dos hermanos con más de{" "}
+              <span className="text-foreground font-semibold">13 años de experiencia combinada</span>{" "}
+              en el sector tecnológico.
             </p>
             <p className="mb-6 text-lg leading-relaxed text-muted">
-              Uno de nosotros es experto en{" "}
-              <span className="text-cyan-400">programación y desarrollo web</span>,
-              el otro en{" "}
-              <span className="text-blue-400">
-                sistemas y ciberseguridad
-              </span>
-              . Juntos, cubrimos todo el espectro tecnológico que una empresa
-              necesita para crecer.
+              <span className="text-cyan-400">+4 años en desarrollo Full Stack</span>{" "}
+              creando plataformas y aplicaciones para grandes marcas.{" "}
+              <span className="text-blue-400">+9 años en ciberseguridad e infraestructura IT/OT</span>{" "}
+              protegiendo entornos industriales críticos en sectores como el farmacéutico y alimentario.
             </p>
             <p className="text-lg leading-relaxed text-muted">
-              No somos una gran corporación. Somos un equipo cercano que trabaja
-              directamente contigo, entendiendo tu negocio y ofreciendo
-              soluciones reales, no plantillas genéricas.
+              No somos una gran corporación. Somos un equipo cercano con experiencia
+              real en empresas de primer nivel, que ahora trabaja directamente contigo
+              para ofrecerte soluciones a tu medida.
             </p>
           </motion.div>
 
@@ -83,7 +87,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="grid gap-6"
           >
-            {/* Brother 1 */}
+            {/* Brother 1 - Developer */}
             <div className="group rounded-2xl border border-white/[0.06] bg-card/50 p-6 transition-all duration-300 hover:border-cyan-500/20">
               <div className="flex items-start gap-4">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 text-cyan-400">
@@ -93,16 +97,28 @@ export default function About() {
                   <h3 className="font-heading text-lg font-semibold text-foreground">
                     Desarrollo y Programación
                   </h3>
-                  <p className="mt-1 text-sm text-muted">
-                    Experto en desarrollo web, aplicaciones y software a medida.
-                    Convierte ideas en productos digitales funcionales y
-                    atractivos.
+                  <p className="mt-1 text-xs font-medium text-cyan-400/70 mb-2">
+                    +4 años de experiencia &middot; Full Stack Developer
                   </p>
+                  <p className="text-sm text-muted">
+                    Full Stack Developer con experiencia en plataformas de analítica
+                    para grandes marcas. Dominio de PHP, Python, Angular, Laravel,
+                    Node.js, APIs y Google Cloud.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/ra%C3%BAl-ant%C3%B3n-gonz%C3%A1lvez-342082158/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-cyan-400 cursor-pointer"
+                  >
+                    <LinkedinIcon className="h-3.5 w-3.5" />
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Brother 2 */}
+            {/* Brother 2 - Security */}
             <div className="group rounded-2xl border border-white/[0.06] bg-card/50 p-6 transition-all duration-300 hover:border-blue-500/20">
               <div className="flex items-start gap-4">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 text-blue-400">
@@ -112,11 +128,23 @@ export default function About() {
                   <h3 className="font-heading text-lg font-semibold text-foreground">
                     Sistemas y Ciberseguridad
                   </h3>
-                  <p className="mt-1 text-sm text-muted">
-                    Especialista en infraestructura IT, administración de
-                    sistemas y seguridad informática. Protege y optimiza tu
-                    entorno tecnológico.
+                  <p className="mt-1 text-xs font-medium text-blue-400/70 mb-2">
+                    +9 años de experiencia &middot; Head of Infrastructure
                   </p>
+                  <p className="text-sm text-muted">
+                    Líder en ciberseguridad industrial e infraestructura IT/OT.
+                    Experiencia protegiendo entornos críticos en sectores farmacéutico
+                    y alimentario. Especialista en IEC 62443, VMware, Fortinet y redes industriales.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/adrian-anton-gonzalvez/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-blue-400 cursor-pointer"
+                  >
+                    <LinkedinIcon className="h-3.5 w-3.5" />
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </div>

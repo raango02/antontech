@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -35,9 +36,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="#inicio" className="flex items-center gap-2 cursor-pointer">
-          <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-blue">
-            <span className="font-heading text-sm font-bold text-white">A</span>
-          </div>
+          <Image src="/logo.png" alt="AntonTech" width={36} height={36} className="h-9 w-9" />
           <span className="font-heading text-lg font-bold text-foreground">
             Anton<span className="text-accent">Tech</span>
           </span>

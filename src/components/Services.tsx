@@ -64,8 +64,6 @@ export default function Services() {
 
   return (
     <section id="servicios" className="relative py-24 sm:py-32">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-[#050a15] to-[#030303]" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         {/* Section header */}
