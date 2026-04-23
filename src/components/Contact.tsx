@@ -227,6 +227,7 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error" | "cooldown">("idle");
   const [subject, setSubject] = useState("");
   const [privacy, setPrivacy] = useState(false);
+  const [formKey, setFormKey] = useState(0);
   const lastSubmitRef = useRef(0);
 
   const handleSubmit = async (e: FormEvent) => {
@@ -263,6 +264,7 @@ export default function Contact() {
         form.reset();
         setSubject("");
         setPrivacy(false);
+        setFormKey((k) => k + 1);
         setTimeout(() => setStatus("idle"), COOLDOWN_MS);
       } else {
         setStatus("error");
@@ -312,7 +314,7 @@ export default function Contact() {
                 <h4 className="font-heading text-base font-semibold text-foreground">
                   Email
                 </h4>
-                <p className="mt-1 text-sm text-muted">info.antontech@gmail.com</p>
+                <p className="mt-1 text-sm text-muted">info@antontech.es</p>
               </div>
             </div>
 
@@ -369,7 +371,7 @@ export default function Contact() {
                     placeholder="Tu nombre"
                   />
                 </div>
-                <EmailInput />
+                <EmailInput key={formKey} />
               </div>
 
               <div className="mt-6">

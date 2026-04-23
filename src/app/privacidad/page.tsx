@@ -53,10 +53,10 @@ export default function Privacidad() {
             <p className="mt-2">
               Contacto:{" "}
               <a
-                href="mailto:info.antontech@gmail.com"
+                href="mailto:info@antontech.es"
                 className="text-[#06b6d4] transition-colors hover:text-[#06b6d4]/80"
               >
-                info.antontech@gmail.com
+                info@antontech.es
               </a>
             </p>
           </section>
@@ -145,10 +145,10 @@ export default function Privacidad() {
             <p className="mt-4">
               Para ejercer cualquiera de estos derechos, escríbenos a{" "}
               <a
-                href="mailto:info.antontech@gmail.com"
+                href="mailto:info@antontech.es"
                 className="text-[#06b6d4] transition-colors hover:text-[#06b6d4]/80"
               >
-                info.antontech@gmail.com
+                info@antontech.es
               </a>
               .
             </p>

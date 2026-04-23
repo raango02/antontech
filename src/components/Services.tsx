@@ -87,14 +87,23 @@ export default function Services() {
         </motion.div>
 
         {/* Service cards grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
+          {services.map((service, index) => {
+            // On lg: first 3 = cols 1-2, 3-4, 5-6. Last 2 = cols 2-3 and 4-5 (centered)
+            const isLastRow = index >= 3;
+            const isFirstOfLastRow = index === 3;
+            const colSpan = isLastRow
+              ? isFirstOfLastRow
+                ? "lg:col-span-2 lg:col-start-2"
+                : "lg:col-span-2"
+              : "lg:col-span-2";
+            return (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 ${service.borderColor} cursor-pointer`}
+              className={`group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 ${service.borderColor} ${colSpan} cursor-pointer`}
             >
               {/* Gradient overlay on hover */}
               <div
@@ -118,7 +127,8 @@ export default function Services() {
                 </p>
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

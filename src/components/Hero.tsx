@@ -125,17 +125,17 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
-            href="#contacto"
+            href="#servicios"
             className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-blue px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 cursor-pointer"
           >
-            Solicita presupuesto
+            Ver servicios
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
-            href="#servicios"
+            href="#contacto"
             className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-base font-semibold text-foreground transition-all duration-200 hover:border-white/20 hover:bg-white/10 cursor-pointer"
           >
-            Ver servicios
+            Hablemos
           </a>
         </motion.div>
       </div>

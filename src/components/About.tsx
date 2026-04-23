@@ -102,8 +102,8 @@ export default function About() {
                   </p>
                   <p className="text-sm text-muted">
                     Full Stack Developer con experiencia en plataformas de analítica
-                    para grandes marcas. Dominio de PHP, Python, Angular, Laravel,
-                    Node.js, APIs y Google Cloud.
+                    para grandes marcas. Dominio de JavaScript, PHP, Python, Angular, Laravel,
+                    Node.js, APIs, SQL y Google Cloud.
                   </p>
                   <a
                     href="https://www.linkedin.com/in/ra%C3%BAl-ant%C3%B3n-gonz%C3%A1lvez-342082158/"
